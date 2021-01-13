@@ -3,7 +3,9 @@
 # sonnenBatterie-Widget: SBControl V1
 Widget für die sonnenBatterien Eco 8.0/SB10
 
-![dayLogo](/image/sbcontrol1-1.jpeg) - Übersicht der Daten im Day-Mode
+![dayWidget](/image/sbcontrol1-4.jpeg)
+
+![nightWidget](/image/sbcontrol1-1.jpeg) - Übersicht der Daten im Day-Mode
 
 ![sbv4n](sbv4-3.jpeg)  - Darstellung der Daten im Night-Mode
 
