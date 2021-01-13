@@ -153,4 +153,4 @@ Die JSON-Datei "MonitoringData.js" hat den folgenden Aufbau hat:
 
 ## Changelog
 
-2021/01/12: sonnenBatterie V4.0 (Widget) init
+2021/01/13: SBControl V1.0 (Widget) init
