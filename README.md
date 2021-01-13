@@ -1,6 +1,6 @@
-#### scriptable.sonnenBatterie V4
+#### scriptable.SBControl V1
 
-# sonnenBatterie-Widget V4
+# sonnenBatterie-Widget: SBControl V1
 Widget für die sonnenBatterien Eco 8.0/SB10
 
 ![sbv4d](sbv4-2.jpeg)  - Übersicht der Daten im Day-Mode
