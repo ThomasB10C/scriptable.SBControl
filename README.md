@@ -1,15 +1,19 @@
 #### scriptable.SBControl V1
 
 # sonnenBatterie-Widget: SBControl V1
-Widget für die sonnenBatterien Eco 8.0/SB10
+Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
+- Widget1: Monitoring von Betriebsdaten  --> SBControl1.js 
+- Widget2: Monitoring von Statusdaten  --> SBControl2.js 
 
-![dayWidget](/image/sbcontrol1-4.jpeg)
+![dayWidget](/image/sbcontrol1-4.jpeg) 
+- Übersicht der Daten im Day-Mode
 
-![nightWidget](/image/sbcontrol1-1.jpeg) - Übersicht der Daten im Day-Mode
+![nightWidget](/image/sbcontrol1-1.jpeg) 
+- Übersicht der Daten im Day-Mode
 
-![sbv4n](sbv4-3.jpeg)  - Darstellung der Daten im Night-Mode
-
-Download: >>> [hier](SonnenBatterieV4.01.js)
+### Download der Scripte
+- Download von SBControl1: >>> [hier](SonnenBatterieV4.01.js)
+- Download von SBControl2: >>> [hier](SonnenBatterieV4.01.js)
 
 ## Kurzbeschreibung
 Das Widget sonnenBatterie V4 dient dem Monitoring der sonnenBatterien Eco 8.0 und SB10. Es fragt ausgewählte Betriebsdaten der sonnenBatterie über API-Schnittstellen der REST-API ab und stellt diese im Widget in einer Übersicht zur Verfügung. Das Widget läuft mit Unterstützung der iPhone-/iPad-App **Scriptable** ab **iOS14**.
