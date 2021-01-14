@@ -74,17 +74,17 @@ Die folgenden Daten werden im Widget2 SBControl2.js dargestellt:
 - Name des Widgets
 
 **3. bis 7. Zeile**
-- **Grid: Off/On** - Status der Verbindung der sonnenBatterie zum Stromnetz, "Off" bedeutet "⚡️OffGrid, "On" bedeutet "OnGrid"
-- **Counter:** - **99% ↑** - Ladezustand der sonnenBatterie mit Trendanzeige bei Ladung= On.
-- **T: ** - **23,45º** -**25,77º** - Temperaturwerte der Zellen, minimaler Temperaturwert, maximaler Temperaturwert
-- **R1**:Off/On** R2**:Off/On - Status der Abregelung der Limitstufe1 (Reduction1) und der Limitstufe2 (Reduction2), Off= Aus, On= Ein
-- **R3**:0/1 - Status des Self Consumption Relay, 0= Off, 1= On
+- **Grid: OnGrid/⚡️OffGrid** - Status der Verbindung der sonnenBatterie zum Stromnetz.
+- **Counter:** - **999** - Anzahl der gezählten Ladezyklen (Vollzyklen) für die Batterie.
+- **T:** - **23,45º** -**25,77º** - Temperaturwerte der Zellen, minimaler Temperaturwert, maximaler Temperaturwert
+- **R1**: Off/On **R2**: Off/On - Status der Abregelung der Limitstufe1 (Reduction1) und der Limitstufe2 (Reduction2), Off= Aus, On= Ein
+- **R3**: Off/On - Status des Self Consumption Relay, Off= Aus, On= Ein
 
 Zur Beachtung: Die Aktualisierung der Betriebsdaten der Batterie kann (zurzeit) nur dann durchgeführt werden, wenn sich das iPhone im Empfangsbereich des WLAN befindet. Sollte die Firma sonnen einen für das Widget erforderlichen iCloud-Zugang bereitstellen, dann können auch Daten der Batterien bereitgestellt werden, wenn man mit dem Handy unterwegs und ausserhalb des WLAN-Bereiches ist.
 
 ## Settings, Parameter
 
-#### Widget1 **SBControl1
+#### Widget1 SBControl1
 
 Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter einzugeben:
 
@@ -93,37 +93,12 @@ Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter ei
 3. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
 4. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
 
-#### Widget2 **SBControl2
+#### Widget2 SBControl2
 
 Die IP-Adresse und ein Token sind für das Script2 nicht erforderlich. Lediglich die beiden folgenden Parameter sollten mit den Einstellungen im Script1 übereinstimmen:
 
 1. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
 2. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
-
-### Statuswerte
-
-**Online-/Offline-Status**
-
-- Der Offline-Status der Batterie wird mit dem folgenden Bild angezeigt.
-- Dafür wechselt die Anzeige in der obersten Zeile im Widget von "Online" auf "⚡️Offline".
-- Wenn die Datenübersicht in hellgrauer Schrift angezeigt wird, dann befindet sich Ihr iPhone oder Ihr iPad außerhalb des WLAN-Bereiches, dann können keine aktuellen Live-Daten von der Batterie ausgelesen werden. Nach Rückkehr in den WLAN-Bereich schaltet die Anzeige dann wieder in den Farbmodus um, wenn wieder aktuellen Live-Daten im Zugriff sind.
-
-![Offline](sbv3-4.jpeg)
-
-**OnGrid-/OffGrid-Status**
-
-- OnGrid/OffGrid - die Trennung von Stromnetz wird in der vorletzten Zeile angezeigt. 
-- Die Anzeige wechselt zwischen: "Grid: 1" und "Grid: 0", bei "Grid: 1" ist die Batterie mit dem Stromnetz verbunden.
-
-**Status der Abregelungs-Relais**
-
-- R1/R2: 0/1 - das Widget prüft auch den Status des Reduction-Relais R1 und R2, R1/R2: "0" = Off, "1"= On.
-- Im Bild wurden die beiden Relais aktuell auf Abregelung= On gesetzt.
-
-![R1&R2](sbv4-1.jpeg)
-
-**Status des Self Consumption Relais**
-- R3: 0/1 - der Status des Self Consumption Relay wird in dieser Zeile als 3. Position angezeigt, R3: "0" = Off, "1"= On
 
 ## API-Schnittstellen
 
