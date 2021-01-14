@@ -57,7 +57,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - **Einspeisung/Bezug** in kW, die Anzeige wechselt zwischen Einspeisung und Bezug, abhängig vom Status
 - **Ladung/Entladung** in kW, die Anzeige wechselt zwischen Ladung und Entladung, abhängig vom Status
 
-#### Übersicht von Statusdaten Widget2: SBControl2
+#### Übersicht von Statusdaten im Widget2: SBControl2
 
 ![widget2](/image/sbControl1-6.jpeg)
 
