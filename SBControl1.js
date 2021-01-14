@@ -3,7 +3,7 @@
 // icon-color: green; icon-glyph: magic;
 /*
 These must be at the very top of the file. Do not edit.
-sSB-Control1.js V1.0 1
+SB-Control1.js V1.0 1
 Run Script with Scriptable.
 Parameter use by Scriptable
 10C.Thomas Burchert, MIT-Lizenz; paypal.me/10CSoftware 
