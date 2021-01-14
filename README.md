@@ -84,7 +84,7 @@ Zur Beachtung: Die Aktualisierung der Betriebsdaten der Batterie kann (zurzeit) 
 
 ## Settings, Parameter
 
-##### Widget1 SBControl1
+#### Widget1 SBControl1
 
 Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter einzugeben:
 
@@ -93,7 +93,7 @@ Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter ei
 3. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
 4. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
 
-##### Widget2 SBControl2
+#### Widget2 SBControl2
 
 Die IP-Adresse und ein Token sind für das Script2 nicht erforderlich. Lediglich die beiden folgenden Parameter sollten mit den Einstellungen im Script1 übereinstimmen:
 
@@ -112,20 +112,22 @@ Die JSON-Daten der folgenden API-Schnittstellen werden verarbeitet:
 
 ````APIurl4 ="http://xxx.xxx.xxx.xx:8080/api/ios"```` --> iOSData.js
 
-- **Widget1 - SBControl1:** Die ausgelesenen Daten werden sofort für das Monitoring zur Anzeige gebracht. Eine Langzeitspeicherung der Daten, bspw. in einer Datenbank für die Visualisierung von 24-h-Tagestrends, erfolgt nicht. 
+#### Widget1 - SBControl1
+Die ausgelesenen Daten werden sofort für das Monitoring zur Anzeige gebracht. Eine Langzeitspeicherung der Daten, bspw. in einer Datenbank für die Visualisierung von 24-h-Tagestrends, erfolgt nicht. 
 
 Nach jedem Lesezyklus der API-Daten werden diese jeweils in einer temporären JSON-Datei gespeichert, diese Daten werden bei Störung der Internetverbindung zur Anzeige gebracht und nach Wiederherstellung der Verbindungen sofort wieder überschrieben. 
 
-![Datenordner](/image/sbcontrol1-2.jpeg)
-- Dateiordner mit API-Dateien und Protokolldatei
-
-- **Widget2 - SBControl2:** Das Widget2 liest die Daten der MonitoringData-Datei ein, die vom Widget1 gespeichert wurden. Es bewertet die Statuswerte der Batterie, gekennzeichnet diese ggf. besonders durch eine Farbzuordnung und bringt diese dann zur Anzeige. 
+#### Widget2 - SBControl2
+Das Widget2 liest die Daten der MonitoringData-Datei ein, die vom Widget1 gespeichert wurden. Es bewertet die Statuswerte der Batterie, gekennzeichnet diese ggf. besonders durch eine Farbzuordnung und bringt diese dann zur Anzeige. 
 
 Die beiden Widgets laufen im Homescreen des iPhones bzw. iPads. Sie werden vom Betriebssystem in festen Zeitzyklen gestartet, dann wird die Datenanzeige aktualisiert. Dieser Zeitzyklus kann zurzeit nicht verändert werden; allerdings startet ein Tippen auf das Widget die Datenabfrage manuell, dann werden die aktuellen Daten der Batterie durch das Widget mit Hilfe der App Scriptable sofort angezeigt und aktualisiert.
 
-Das Widget01 erzeugt zwei zusätzliche Dateien:
+Das **Widget01** erzeugt zwei zusätzliche Dateien:
 1. für das Monitoring eine eigene JSON-Datei --> MonitoringData.js, die ausgewählte Betriebsdaten enthält.
 2. eine Protokoll-Datei --> LogData.js, diese Datei enthält Systemmitteilungen und ggf. Fehlermeldungen.
+
+##### Dateiordner mit API-Dateien und Protokolldatei
+![Datenordner](/image/sbcontrol1-2.jpeg)
 
 Die JSON-Datei "MonitoringData.js" hat den folgenden Aufbau hat:
 
