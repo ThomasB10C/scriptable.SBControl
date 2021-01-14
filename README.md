@@ -6,12 +6,12 @@ Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
 - Widget2: Monitoring von Statusdaten  --> SBControl2.js 
 
 ##### Übersicht der Daten im Day-Mode
+(Links: SBControl1, Rechts: SBControl2)
 ![dayWidget](/image/sbcontrol1-4.jpeg) 
-- Links: SBControl1, Rechts: SBControl2
 
 ##### Übersicht der Daten im Night-Mode
+(Links: SBControl1, Rechts: SBControl2)
 ![nightWidget](/image/sbcontrol1-1.jpeg) 
-- Links: SBControl1, Rechts: SBControl2
 
 ### Download der Scripte
 - Download von SBControl1: >>> [hier](SonnenBatterieV4.01.js)
@@ -26,7 +26,7 @@ Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit.
 
 - Das Widget1 kann auch alleine betrieben werden. Das Widget2 benötigt die Daten des Widget1, es läuft nur, wenn auch das Widget1 installiert worden ist!
 
-Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App _ _Scriptable ab iOS14_ _.
+Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App _Scriptable ab iOS14_.
 
 #### Widget1 - SBControl1
 
@@ -36,9 +36,9 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 
 **1. Zeile**
 - 🔅/☁️/🌔 - Status für die gestartete Produktion/Erzeugung der PV-Anlage On/Off
- - 🔅 - sonnig, die PV-Anlage erzeugt Strom
- - ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
- - 🌔 - nachts, die PV-Anlage liefert keinen Strom
+  - 🔅 - sonnig, die PV-Anlage erzeugt Strom
+  - ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
+  - 🌔 - nachts, die PV-Anlage liefert keinen Strom
 
 - 19:44 - Uhrzeit des letzten Datenupdates der Abfrage der sonnenBatterie (Timestamp)
 - Online/⚡️Offline - Status der Verbindung der sonnenBatterie zum Internet (Status der Eclipse)
