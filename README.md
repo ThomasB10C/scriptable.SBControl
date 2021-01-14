@@ -5,12 +5,12 @@ Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
 - Widget1: Monitoring von Betriebsdaten  --> SBControl1.js 
 - Widget2: Monitoring von Statusdaten  --> SBControl2.js 
 
+##### Übersicht der Daten im Day-Mode
 ![dayWidget](/image/sbcontrol1-4.jpeg) 
-- Übersicht der Daten im Day-Mode
 - Links: SBControl1, Rechts: SBControl2
 
+##### Übersicht der Daten im Night-Mode
 ![nightWidget](/image/sbcontrol1-1.jpeg) 
-- Übersicht der Daten im Night-Mode
 - Links: SBControl1, Rechts: SBControl2
 
 ### Download der Scripte
@@ -24,11 +24,11 @@ Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit.
 
 - Das Widget2 kann als Ergänzung zum Widget1 angesehen werden. Es kontrolliert Statusdaten der sonnenBatterie, bspw. den Schaltzustand der Abregelungsrelais oder des Self Consumption Relais, und auch den Verbindungsstatus der sonnenBatterie zum Internet und mit dem Stromnetz.
 
-- Das Widget1 kann auch alleine betrieben werden. Das Widget2 benötigt die Daten des Widgets1, des läuft es nur, wenn auch das Widget1 installaiert worden ist
+- Das Widget1 kann auch alleine betrieben werden. Das Widget2 benötigt die Daten des Widget1, es läuft nur, wenn auch das Widget1 installiert worden ist!
 
 Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App **Scriptable** ab **iOS14**.
 
-### Widget1 SBControl1
+#### Widget1 SBControl1
 
 ![widget1](/image/sbControl1-5.jpeg)
 
@@ -47,7 +47,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - Name des Widgets
 
 **3. Zeile**
-- **99% ↑** - Ladezustand der sonnenBatterie mit Trendanzeige bei Ladung= On.
+- **99% ↑↓** - Ladezustand der sonnenBatterie mit Trendanzeige bei Ladung= On.
 
 **4. bis 7. Zeile**
 - **Produktion** in kW, Erzeugung der PV-Anlage
@@ -55,7 +55,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - **Einspeisung/Bezug** in kW, die Anzeige wechselt zwischen Einspeisung und Bezug, abhängig vom Status
 - **Ladung/Entladung** in kW, die Anzeige wechselt zwischen Ladung und Entladung, abhängig vom Status
 
-### Widget2 **SBControl2
+#### Widget2 SBControl2
 
 ![widget2](/image/sbControl1-6.jpeg)
 
@@ -75,7 +75,7 @@ Die folgenden Daten werden im Widget2 SBControl2.js dargestellt:
 
 **3. bis 7. Zeile**
 - **Grid:** OnGrid/⚡️OffGrid - Status der Verbindung der sonnenBatterie zum Stromnetz.
-- **Counter:** - 999 - Anzahl der gezählten Ladezyklen (Vollzyklen) für die Batterie.
+- **Counter:** - 999⤒ - Anzahl der gezählten Ladezyklen (Vollzyklen) für die Batterie.
 - **T:** 23,45º-25,77º - Temperaturwerte der Zellen, minimaler Temperaturwert, maximaler Temperaturwert
 - **R1**: Off/On **R2**: Off/On - Status der Abregelung der Limitstufe1 (Reduction1) und der Limitstufe2 (Reduction2), Off= Aus, On= Ein
 - **R3**: Off/On - Status des Self Consumption Relay, Off= Aus, On= Ein
@@ -84,7 +84,7 @@ Zur Beachtung: Die Aktualisierung der Betriebsdaten der Batterie kann (zurzeit) 
 
 ## Settings, Parameter
 
-#### Widget1 SBControl1
+##### Widget1 SBControl1
 
 Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter einzugeben:
 
@@ -93,7 +93,7 @@ Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter ei
 3. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
 4. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
 
-#### Widget2 SBControl2
+##### Widget2 SBControl2
 
 Die IP-Adresse und ein Token sind für das Script2 nicht erforderlich. Lediglich die beiden folgenden Parameter sollten mit den Einstellungen im Script1 übereinstimmen:
 
