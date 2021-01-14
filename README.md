@@ -1,6 +1,6 @@
-#### scriptable.SBControl V1
+#### scriptable.SBControl
 
-# sonnenBatterie-Widget: SBControl V1
+# sonnenBatterie-Widget: SBControl
 Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
 - Widget1: Monitoring von Betriebsdaten  --> SBControl1.js 
 - Widget2: Monitoring von Statusdaten  --> SBControl2.js 
