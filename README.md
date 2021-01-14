@@ -7,10 +7,12 @@ Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
 
 ##### Übersicht der Daten im Day-Mode
 (Links: SBControl1, Rechts: SBControl2)
+
 ![dayWidget](/image/sbcontrol1-4.jpeg) 
 
 ##### Übersicht der Daten im Night-Mode
 (Links: SBControl1, Rechts: SBControl2)
+
 ![nightWidget](/image/sbcontrol1-1.jpeg) 
 
 ### Download der Scripte
