@@ -16,8 +16,8 @@ Zwei Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
 ![nightWidget](/image/sbcontrol1-1.jpeg) 
 
 ### Download der Scripte
-- Download von SBControl1: >>> [hier](SBControl1V1.01.js)
-- Download von SBControl2: >>> [hier](SBControl2V1.01.js)
+- Download von SBControl1: >>> [hier](SBControl1.js)
+- Download von SBControl2: >>> [hier](SBControl2.js)
 
 ## Kurzbeschreibung
 Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit. 
