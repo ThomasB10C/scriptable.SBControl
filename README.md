@@ -30,7 +30,7 @@ Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit.
 
 Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App _Scriptable ab iOS14_.
 
-#### Widget1 - SBControl1
+#### Übersicht von Betriebsdaten Widget1 - SBControl1
 
 ![widget1](/image/sbControl1-5.jpeg)
 
@@ -57,7 +57,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - **Einspeisung/Bezug** in kW, die Anzeige wechselt zwischen Einspeisung und Bezug, abhängig vom Status
 - **Ladung/Entladung** in kW, die Anzeige wechselt zwischen Ladung und Entladung, abhängig vom Status
 
-#### Widget2 - SBControl2
+#### Übersicht von Statusdaten Widget2 - SBControl2
 
 ![widget2](/image/sbControl1-6.jpeg)
 
