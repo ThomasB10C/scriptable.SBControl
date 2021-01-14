@@ -30,7 +30,7 @@ Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App **Scriptable** 
 
 ### Widget1 SBControl1
 
-![widget1](sbControl1-5.jpeg)
+![widget1](/image/sbControl1-5.jpeg)
 
 Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 
@@ -57,7 +57,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 
 ### Widget2 **SBControl2
 
-![widget2](sbControl1-5.jpeg)
+![widget2](/image/sbControl1-6.jpeg)
 
 Die folgenden Daten werden im Widget2 SBControl2.js dargestellt:
 
