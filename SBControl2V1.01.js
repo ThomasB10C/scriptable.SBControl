@@ -14,12 +14,12 @@ und zeigt ausgewählte Systemzustände und Statusdaten der
 sonnenBatterie an. Die folgenden Status-Daten werden angezeigt: 
 - Internetverbindung: Online/Offline, 
 - Ladezustand der Batterie SOC in %
-- Netzverbindung: OnGrid/OffGrind,
+- Netzverbindung: OnGrid/OffGrid,
 - Ladezähler: Anzahl der Vollzyklen als Zahl,
 - Temperatur der Zellen: min. und max. Temp. in Grad Celsius
-- Abregelung der Stufe 1: Reduction1 R1: On= 1/Off= 0, 
-- Abregelung der Stufe 2: Reduction2 R2: On= 1/Off= 0, 
-- Status des Self Consumption Relais: R3: On=1/Off= 0
+- Abregelung der Stufe 1: Reduction1 R1: On/Off, 
+- Abregelung der Stufe 2: Reduction2 R2: On/Off, 
+- Status des Self Consumption Relais: R3: On/Off
 *** Parameter: ************************************************
 1. IP-Adresse der sonnenBatterie im LAN
 *** Dateien: **************************************************
@@ -40,9 +40,7 @@ eine Verbindung zur Batterie besteht, werden die aktuellen Daten
 erneut im Farbmodus angezeigt.
 */
 
-const IP = "192.168.178.37"
 const fileManagerMode = 'ICLOUD'; // default is ICLOUD. If you don't use iCloud Drive use option LOCAL
-
 let MONITORING_JSON_VERSION = 1 // never change this value
 
 // Stop edit from this point - ab hier keine Änderungen mehr vornahmen!
