@@ -18,21 +18,31 @@ Widgets für das Monitoring der sonnenBatterien Eco 8.0/SB10
 - Download von SBControl2: >>> [hier](SonnenBatterieV4.01.js)
 
 ## Kurzbeschreibung
-Das Widget sonnenBatterie V4 dient dem Monitoring der sonnenBatterien Eco 8.0 und SB10. Es fragt ausgewählte Betriebsdaten der sonnenBatterie über API-Schnittstellen der REST-API ab und stellt diese im Widget in einer Übersicht zur Verfügung. Das Widget läuft mit Unterstützung der iPhone-/iPad-App **Scriptable** ab **iOS14**.
+Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit. 
 
-Die folgenden Daten werden im Widget dargestellt:
+- Das Widget1 führt ein Monitoring der wichtigsten Leistungsdaten einer Solar-Batterie durch, bspw. der Livedaten für die Stromproduktion, der Verbrauchsdaten oder der Einspeisung, und ist kompatibel zu den sonnenBatterien Eco 8.0 und SB10. Es fragt Betriebsdaten der sonnenBatterie über API-Schnittstellen der REST-API ab und stellt diese im Widget in einer Übersicht zur Verfügung.
+
+- Das Widget2 kann als Ergänzung zum Widget1 angesehen werden. Es kontrolliert Statusdaten der sonnenBatterie, bspw. den Schaltzustand der Abregelungsrelais oder des Self Consumption Relais, und auch den Verbindungsstatus der sonnenBatterie zum Internet und mit dem Stromnetz.
+
+- Das Widget1 kann auch alleine betrieben werden. Das Widget2 benötigt die Daten des Widgets1, des läuft es nur, wenn auch das Widget1 installaiert worden ist
+
+Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App **Scriptable** ab **iOS14**.
+
+### Widget1 **SBControl1
+
+Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 
 **1. Zeile**
 - 🔅/☁️/🌔 - Status für die gestartete Produktion/Erzeugung der PV-Anlage On/Off
-- > 🔅 - sonnig, die PV-Anlage erzeugt Strom
-- > ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
-- > 🌔 - nachts liefert die PV-Anlage keinen Strom
+- 🔅 - sonnig, die PV-Anlage erzeugt Strom
+- ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
+- 🌔 - nachts, die PV-Anlage liefert keinen Strom
 
 - 19:44 - Uhrzeit des letzten Datenupdates der Abfrage der sonnenBatterie (Timestamp)
 - Online/⚡️Offline - Status der Verbindung der sonnenBatterie zum Internet (Status der Eclipse)
 
 **2. Zeile**
-- Name des Scriptes
+- Name des Widgets
 
 **3. Zeile**
 - **99% ↑** - Ladezustand der sonnenBatterie mit Trendanzeige bei Ladung= On.
@@ -43,29 +53,52 @@ Die folgenden Daten werden im Widget dargestellt:
 - **Einspeisung/Bezug** in kW, die Anzeige wechselt zwischen Einspeisung und Bezug, abhängig vom Status
 - **Ladung/Entladung** in kW, die Anzeige wechselt zwischen Ladung und Entladung, abhängig vom Status
 
-**8. Zeile**
-- **Grid:0/1** - Status der Verbindung der sonnenBatterie zum Stromnetz, "0" bedeutet "⚡️OffGrid, "1" bedeutet "OnGrid"
-- **R1**:0/1** R2**:0/1 - Status der Abregelung der Limitstufe1 (Reduction1) und der Limitstufe2 (Reduction2), 0= Off, 1= On
+### Widget2 **SBControl2
+
+Die folgenden Daten werden im Widget2 SBControl2.js dargestellt:
+
+**1. Zeile**
+- 🔅/☁️/🌔 - Status für die gestartete Produktion/Erzeugung der PV-Anlage On/Off
+- 🔅 - sonnig, die PV-Anlage erzeugt Strom
+- ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
+- 🌔 - nachts, die PV-Anlage liefert keinen Strom
+
+- 19:44 - Uhrzeit des letzten Datenupdates der Abfrage der sonnenBatterie (Timestamp)
+- Online/⚡️Offline - Status der Verbindung der sonnenBatterie zum Internet (Status der Eclipse)
+
+**2. Zeile**
+- Name des Widgets
+
+**3. bis 7. Zeile**
+- **Grid: Off/On** - Status der Verbindung der sonnenBatterie zum Stromnetz, "Off" bedeutet "⚡️OffGrid, "On" bedeutet "OnGrid"
+- **Counter:** - **99% ↑** - Ladezustand der sonnenBatterie mit Trendanzeige bei Ladung= On.
+- **T: ** - **23,45º** -**25,77º** - Temperaturwerte der Zellen, minimaler Temperaturwert, maximaler Temperaturwert
+- **R1**:Off/On** R2**:Off/On - Status der Abregelung der Limitstufe1 (Reduction1) und der Limitstufe2 (Reduction2), Off= Aus, On= Ein
 - **R3**:0/1 - Status des Self Consumption Relay, 0= Off, 1= On
 
-**9. Zeile**
-- **999**⤒ - Stand der vollständigen Ladezyklen der sonnenBatterie (Zykluszähler)
-- **23,45º** -**25,77º** - Temperaturwerte der Zellen, minimaler Temperaturwert, maximaler Temperaturwert
-
-Zur Beachtung: Die Aktualisierung der Betriebsdaten der Batterie kann (zurzeit) nur dann durchgeführt werden, wenn sich das iPhone im Empfangsbereich des WLAN befindet. Sollte die Firma sonnen die für das Widget erforderlichen iCloud-Daten der Batterien freischalten, dann wird das Widget daauf angepaßt.
+Zur Beachtung: Die Aktualisierung der Betriebsdaten der Batterie kann (zurzeit) nur dann durchgeführt werden, wenn sich das iPhone im Empfangsbereich des WLAN befindet. Sollte die Firma sonnen einen für das Widget erforderlichen iCloud-Zugang bereitstellen, dann können auch Daten der Batterien bereitgestellt werden, wenn man mit dem Handy unterwegs und ausserhalb des WLAN-Bereiches ist.
 
 ## Settings, Parameter
 
+#### Widget1 **SBControl1
+
 Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter einzugeben:
 
-1. **IP-Adresse**: Gültige IP-Adresse der sonnenBatterie, über die die Batterie im LAN zu erreichen ist, in der Form 999:999:999:99
-2. **Token**: Gültiger Token für den Zugriff auf die REST-API der sonnenBatterie. Dieser kann dem Dashboard der Batterie, Menü 'Softwareintegration' entnommen werden
+1. **IP-Adresse**: Gültige IP-Adresse der sonnenBatterie, über die die Batterie im LAN zu erreichen ist, in der Form 999:999:999:99.
+2. **Token**: Gültiger Token für den Zugriff auf die REST-API der sonnenBatterie. Dieser kann dem Dashboard der Batterie, Menü 'Softwareintegration' entnommen werden.
 3. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
-4. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD
+4. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
+
+#### Widget2 **SBControl2
+
+Die IP-Adresse und ein Token sind für das Script2 nicht erforderlich. Lediglich die beiden folgenden Parameter sollten mit den Einstellungen im Script1 übereinstimmen:
+
+1. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
+2. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
 
 ### Statuswerte
 
-**Online-/Offline-status**
+**Online-/Offline-Status**
 
 - Der Offline-Status der Batterie wird mit dem folgenden Bild angezeigt.
 - Dafür wechselt die Anzeige in der obersten Zeile im Widget von "Online" auf "⚡️Offline".
