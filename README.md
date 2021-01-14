@@ -30,7 +30,7 @@ Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit.
 
 Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App _Scriptable ab iOS14_.
 
-#### Übersicht von Betriebsdaten Widget1 - SBControl1
+#### Übersicht von Betriebsdaten im Widget1: SBControl1
 
 ![widget1](/image/sbControl1-5.jpeg)
 
@@ -57,7 +57,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - **Einspeisung/Bezug** in kW, die Anzeige wechselt zwischen Einspeisung und Bezug, abhängig vom Status
 - **Ladung/Entladung** in kW, die Anzeige wechselt zwischen Ladung und Entladung, abhängig vom Status
 
-#### Übersicht von Statusdaten Widget2 - SBControl2
+#### Übersicht von Statusdaten Widget2: SBControl2
 
 ![widget2](/image/sbControl1-6.jpeg)
 
@@ -114,12 +114,12 @@ Die JSON-Daten der folgenden API-Schnittstellen werden verarbeitet:
 
 ````APIurl4 ="http://xxx.xxx.xxx.xx:8080/api/ios"```` --> iOSData.js
 
-#### Widget1 - SBControl1
+#### Widget1: SBControl1
 Die ausgelesenen Daten werden sofort für das Monitoring zur Anzeige gebracht. Eine Langzeitspeicherung der Daten, bspw. in einer Datenbank für die Visualisierung von 24-h-Tagestrends, erfolgt nicht. 
 
 Nach jedem Lesezyklus der API-Daten werden diese jeweils in einer temporären JSON-Datei gespeichert, diese Daten werden bei Störung der Internetverbindung zur Anzeige gebracht und nach Wiederherstellung der Verbindungen sofort wieder überschrieben. 
 
-#### Widget2 - SBControl2
+#### Widget2: SBControl2
 Das Widget2 liest die Daten der MonitoringData-Datei ein, die vom Widget1 gespeichert wurden. Es bewertet die Statuswerte der Batterie, gekennzeichnet diese ggf. besonders durch eine Farbzuordnung und bringt diese dann zur Anzeige. 
 
 Die beiden Widgets laufen im Homescreen des iPhones bzw. iPads. Sie werden vom Betriebssystem in festen Zeitzyklen gestartet, dann wird die Datenanzeige aktualisiert. Dieser Zeitzyklus kann zurzeit nicht verändert werden; allerdings startet ein Tippen auf das Widget die Datenabfrage manuell, dann werden die aktuellen Daten der Batterie durch das Widget mit Hilfe der App Scriptable sofort angezeigt und aktualisiert.
