@@ -49,7 +49,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - Name des Widgets
 
 **3. Zeile**
-- **99% ↑↓** - Ladezustand der sonnenBatterie mit Trendanzeige bei Ladung= On.
+- **99% ↑↓** - Ladezustand der sonnenBatterie mit Trendanzeige.
 
 **4. bis 7. Zeile**
 - **Produktion** in kW, Erzeugung der PV-Anlage
