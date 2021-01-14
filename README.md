@@ -143,7 +143,6 @@ Die JSON-Datei "MonitoringData.js" hat den folgenden Aufbau hat:
   "MonitoringCounter": 5,
   "Timestamp": "2021-01-12 18:37:16",
   "ConnectState": true,
-  
   "SystemState": "OnGrid",
   "Production_W": 0,
   "Consumption_W": 560,
