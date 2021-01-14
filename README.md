@@ -26,9 +26,9 @@ Das Widget1 SBControl1 und das Widget2 SBControl2 bilden eine Einheit.
 
 - Das Widget1 kann auch alleine betrieben werden. Das Widget2 benötigt die Daten des Widget1, es läuft nur, wenn auch das Widget1 installiert worden ist!
 
-Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App **Scriptable** ab **iOS14**.
+Beide Widgets laufen nur mit Unterstützung der iPhone-/iPad-App _ _Scriptable ab iOS14_ _.
 
-#### Widget1 SBControl1
+#### Widget1 - SBControl1
 
 ![widget1](/image/sbControl1-5.jpeg)
 
@@ -36,9 +36,9 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 
 **1. Zeile**
 - 🔅/☁️/🌔 - Status für die gestartete Produktion/Erzeugung der PV-Anlage On/Off
-- 🔅 - sonnig, die PV-Anlage erzeugt Strom
-- ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
-- 🌔 - nachts, die PV-Anlage liefert keinen Strom
+ - 🔅 - sonnig, die PV-Anlage erzeugt Strom
+ - ☁️ - bewölkt, die PV-Anlage liefert keinen Strom
+ - 🌔 - nachts, die PV-Anlage liefert keinen Strom
 
 - 19:44 - Uhrzeit des letzten Datenupdates der Abfrage der sonnenBatterie (Timestamp)
 - Online/⚡️Offline - Status der Verbindung der sonnenBatterie zum Internet (Status der Eclipse)
@@ -55,7 +55,7 @@ Die folgenden Daten werden im Widget1 SBControl1.js dargestellt:
 - **Einspeisung/Bezug** in kW, die Anzeige wechselt zwischen Einspeisung und Bezug, abhängig vom Status
 - **Ladung/Entladung** in kW, die Anzeige wechselt zwischen Ladung und Entladung, abhängig vom Status
 
-#### Widget2 SBControl2
+#### Widget2 - SBControl2
 
 ![widget2](/image/sbControl1-6.jpeg)
 
@@ -84,7 +84,7 @@ Zur Beachtung: Die Aktualisierung der Betriebsdaten der Batterie kann (zurzeit) 
 
 ## Settings, Parameter
 
-#### Widget1 SBControl1
+#### Widget1 - SBControl1
 
 Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter einzugeben:
 
@@ -93,7 +93,7 @@ Im Script selbst sind in den dafür markierten Zeilen die folgenden Parameter ei
 3. **TimeoutInterval**: Zeit für den Abbruch der API-Abfrage, wenn keine Antwort zurück kommt, Standard = 1 Sekunde.
 4. **FileManagerMode**: Parameter für die Speicherung der temporären Daten im iPhone-Speicher (LOKAL) oder in der Cloud (iCLOUD), Standard = ICLOUD.
 
-#### Widget2 SBControl2
+#### Widget2 - SBControl2
 
 Die IP-Adresse und ein Token sind für das Script2 nicht erforderlich. Lediglich die beiden folgenden Parameter sollten mit den Einstellungen im Script1 übereinstimmen:
 
